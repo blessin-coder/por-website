@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Promises Of Restoration (P.O.R)</title>
-    <meta name="description" content="Affordable addiction recovery services in Kiambu.">
+    <meta name="description" content="Affordable addiction recovery and rehabilitation services in Kiambu, Kenya. Promises of Restoration helps individuals overcome drug and alcohol addiction.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@
         .container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 clamp(24px, 5vw, 60px);
         }
 
         .text-center { text-align: center; }
@@ -126,7 +126,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 160px 0 120px;
+            padding: 180px 0 140px;
             background: linear-gradient(135deg, rgba(8, 70, 65, 0.75) 0%, rgba(26, 90, 50, 0.8) 100%), url('restore.jpg') center/cover no-repeat;
             position: relative;
             overflow: hidden;
@@ -218,7 +218,7 @@
 
         /* About Section */
         .about-section {
-            padding: 100px 0;
+            padding: 120px 0;
             background: var(--white);
         }
 
@@ -293,7 +293,7 @@
 
         /* Services Section */
         .services-section {
-            padding: 100px 0;
+            padding: 120px 0;
             background: #F0FDF4; /* Very light green */
             text-align: center;
         }
@@ -322,7 +322,7 @@
         .contact-section {
             background: #0F172A;
             color: var(--white);
-            padding: 80px 0 40px;
+            padding: 100px 0 40px;
             text-align: center;
         }
 
@@ -476,9 +476,12 @@
             .menu-toggle { display: flex; }
             .contact-cta { display: none; }
             .hero-title { font-size: 2.8rem; }
-            .hero { padding: 100px 0 60px; }
+            .hero { padding: 120px 0 80px; }
             .hero-subtitle { font-size: 1rem; }
             .values-container { padding: 30px; }
+            .about-section { padding: 80px 0; }
+            .services-section { padding: 80px 0; }
+            .contact-section { padding: 60px 0 30px; }
         }
     </style>
 </head>
@@ -489,7 +492,7 @@
     <header>
         <div class="container navbar">
             <a href="#" style="display: flex; align-items: center; text-decoration: none;">
-                <img src="logo.png" alt="Promises of Restoration Logo" style="height: 60px; width: auto; max-width: 250px; object-fit: contain;">
+                <img src="logo.png" alt="Promises of Restoration Logo" style="height: 85px; width: auto; max-width: 300px; object-fit: contain;">
             </a>
             
             <div class="menu-toggle" id="mobile-menu">
@@ -629,8 +632,8 @@
 
     <!-- Contact & Footer -->
     <footer id="contact" class="contact-section">
-        <div class="container" style="padding: 40px 0 20px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; margin-bottom: 60px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 50px; text-align: left; margin-bottom: 80px;">
                 
                 <!-- Col 1: Brand & Contact -->
                 <div>
@@ -699,5 +702,18 @@
             navLinks.classList.toggle('active');
         });
     </script>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254704525568" 
+       style="position:fixed;bottom:20px;right:20px;
+       background:#25D366;color:white;padding:12px 18px;
+       border-radius:50px;text-decoration:none;
+       box-shadow:0 4px 10px rgba(0,0,0,0.3);z-index:9999;
+       font-family:'Montserrat', sans-serif; font-weight:700;
+       transition:transform 0.3s;"
+       onmouseover="this.style.transform='scale(1.05)'" 
+       onmouseout="this.style.transform='scale(1)'">
+       Chat on WhatsApp
+    </a>
 </body>
 </html>
