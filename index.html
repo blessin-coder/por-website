@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Promises Of Restoration (P.O.R)</title>
+    <meta name="description" content="Affordable addiction recovery services in Kiambu.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0F766E; /* Deep teal/green */
+            --secondary: #2E8B57; /* Sea green */
+            --accent: #EAB308; /* Soft gold for faith/hope */
+            --bg-light: #EEF2F6; /* Softened light background to reduce brightness */
+            --text-dark: #1E293B;
+            --text-muted: #475569;
+            --white: #F8F9FA; /* Off-white to reduce glare */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .text-center { text-align: center; }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+
+        /* Header */
+        header {
+            background: var(--white);
+            color: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .contact-cta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(15, 118, 110, 0.05);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(15, 118, 110, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-cta:hover {
+            background: rgba(15, 118, 110, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .contact-cta a {
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 120px;
+            background: linear-gradient(135deg, rgba(8, 70, 65, 0.75) 0%, rgba(26, 90, 50, 0.8) 100%), url('restore.jpg') center/cover no-repeat;
+            position: relative;
+            overflow: hidden;
+            color: var(--white);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -20%;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title, .newsletter-btn, .contact-cta a, .contact-cta span {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: 4.2rem;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: #FFFFFF;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 700px;
+            margin: 0 auto 60px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Image Cards */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 100px;
+        }
+
+        .image-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--secondary);
+            transition: transform 0.5s ease;
+        }
+
+        .image-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-card-content {
+            padding: 24px;
+            text-align: center;
+            background: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .image-card-title {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            padding: 32px;
+            background: #F8FAFC;
+            border-radius: 20px;
+            border-top: 5px solid var(--secondary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            text-align: left;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .values-container {
+            background: linear-gradient(145deg, #1E293B, var(--primary));
+            border-radius: 30px;
+            padding: 50px;
+            color: var(--white);
+            box-shadow: 0 20px 50px rgba(15, 118, 110, 0.2);
+        }
+
+        .values-container h3 {
+            color: var(--white);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .values-container p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .core-values {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--accent) !important;
+            letter-spacing: 1px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            background: #F0FDF4; /* Very light green */
+            text-align: center;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: #0F172A;
+            color: var(--white);
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: var(--white);
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            margin: 40px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-info strong {
+            color: var(--accent);
+        }
+
+        .newsletter {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 0 auto 60px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .newsletter h3 { color: var(--white); margin-bottom: 20px; }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-input {
+            padding: 14px 24px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            width: 300px;
+            max-width: 100%;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .newsletter-btn {
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            border: none;
+            background: var(--accent);
+            color: #422006;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-btn:hover {
+            background: #FDE047;
+            transform: scale(1.05);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Hero Buttons */
+        .primary-btn {
+            padding: 15px 35px;
+            background: var(--accent);
+            color: #422006;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(234, 179, 8, 0.4);
+            border: 2px solid var(--accent);
+        }
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(234, 179, 8, 0.6);
+            background: #FDE047;
+            border-color: #FDE047;
+        }
+        .outline-btn {
+            padding: 15px 35px;
+            background: transparent;
+            color: var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid var(--white);
+            transition: all 0.3s;
+        }
+        .outline-btn:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            margin-left: 20px;
+        }
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar { position: relative; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                text-align: center;
+                gap: 20px;
+            }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: flex; }
+            .contact-cta { display: none; }
+            .hero-title { font-size: 2.8rem; }
+            .hero { padding: 100px 0 60px; }
+            .hero-subtitle { font-size: 1rem; }
+            .values-container { padding: 30px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container navbar">
+            <a href="#" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="logo.png" alt="Promises of Restoration Logo" style="height: 60px; width: auto; max-width: 250px; object-fit: contain;">
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-cta">
+                <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Call Us:</span>
+                <a href="tel:254704525568">254 704 525 568</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center hero-content">
+            <h1 class="hero-title animate-fade-up">Promises Of Restoration</h1>
+            <p class="hero-subtitle animate-fade-up delay-1">
+                Restoring Hope, Rebuilding Lives. A strictly Christian-based, non-profit organization dedicated to providing affordable, accessible treatment for substance abuse.
+            </p>
+
+            <div style="margin-top:40px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;" class="animate-fade-up delay-2">
+                <a href="#contact" class="primary-btn">Get Help Now</a>
+                <a href="#services" class="outline-btn">View Programs</a>
+            </div>
+
+            <!-- Hero Images Container -->
+            <div class="image-grid animate-fade-up" style="animation-delay: 0.6s;">
+                <div class="image-card">
+                    <img src="ahadipik2.jpg" loading="lazy" alt="Counseling and Psychology" onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop';">
+                    <div class="image-card-content">
+                        <div class="image-card-title">Counseling & Psychology</div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="depression.jpg" loading="lazy" alt="Depression and Trauma" onerror="this.src='https://images.unsplash.com/photo-1590650153855-d9e808231d41?q=80&w=600&auto=format&fit=crop';">
+                    <div class="image-card-content">
+                        <div class="image-card-title">Depression & Trauma</div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="group_therapy.png" loading="lazy" alt="Group Therapy" onerror="this.src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop';">
+                    <div class="image-card-content">
+                        <div class="image-card-title">Group Therapy</div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="fight_addiction.jpg" loading="lazy" alt="Fight Against Addiction" onerror="this.src='https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=600&auto=format&fit=crop';">
+                    <div class="image-card-content">
+                        <div class="image-card-title">Overcoming Addiction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="hero-title text-center" style="font-size: 2.5rem; margin-bottom: 20px;">Restoring Hope, Rebuilding Lives</h2>
+            
+            <p class="about-text text-center">
+                At <strong>Promises of Restoration (P.O.R)</strong>, we believe that no one is beyond the reach of transformation. Located in Kiambu Kirigiti, our center is a strictly Christian-based non-profit dedicated to helping individuals and families break free from the cycle of alcohol and drug addiction.
+            </p>
+            <p class="about-text text-center" style="margin-bottom: 60px;">
+                We understand that addiction is a treatable disease that affects the whole person—body, mind, and soul. Our mission is to provide a safe, spiritual, and cost-effective environment where healing can begin. Through comprehensive counseling and evidence-based treatment, we walk alongside our clients with Integrity, Loyalty, and Honesty.
+            </p>
+
+            <h3 class="text-center" style="font-size: 2rem; margin-bottom: 40px; color: var(--text-dark);">Why Choose P.O.R?</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>Faith-Centered Healing</h4>
+                    <p style="color: var(--text-muted);">Our foundation is built on steadfast Christian principles, offering a supportive spiritual anchoring.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Affordable Care</h4>
+                    <p style="color: var(--text-muted);">As a non-profit, we prioritize your long-term recovery over profit, making treatment accessible.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Holistic Approach</h4>
+                    <p style="color: var(--text-muted);">We address the physical, spiritual, and emotional health of both the individual and their beloved family.</p>
+                </div>
+            </div>
+
+            <!-- Vision, Mission and Core Values -->
+            <div class="values-container">
+                <h3>Our Vision</h3>
+                <p>To free affected individuals and their families from the bonds of alcohol and drug addiction.</p>
+
+                <h3>Our Mission</h3>
+                <p>To improve the physical, spiritual, and emotional health of those suffering from addiction and their families. We provide safe, transformative, cost-effective, and comprehensive treatment and counseling, guided by integrity and the belief that addiction is a treatable disease.</p>
+
+                <h3>Core Values</h3>
+                <ul class="core-values" style="list-style-type: disc; margin-left: 20px; line-height: 2;">
+                    <li>Respect</li>
+                    <li>Honesty</li>
+                    <li>Loyalty</li>
+                    <li>Beneficence</li>
+                    <li>Trustworthiness</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 60px;">Our Services</h2>
+            <div class="image-grid text-left" style="margin-top:0;">
+                <div class="service-card">
+                    <h3>Alcohol Rehab</h3>
+                    <p style="color: var(--text-muted);">Comprehensive inpatient and outpatient programs meticulously designed to help individuals overcome dependency safely and spiritually.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Drug Detox</h3>
+                    <p style="color: var(--text-muted);">Medically supervised and compassionate detoxification services to manage withdrawal symptoms comfortably and effectively.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Family Support</h3>
+                    <p style="color: var(--text-muted);">Empowering counseling and educational sessions for families to rebuild trust and support their loved ones' holistic recovery journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="contact-section">
+        <div class="container" style="padding: 40px 0 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; margin-bottom: 60px;">
+                
+                <!-- Col 1: Brand & Contact -->
+                <div>
+                    <h3 style="color: var(--white); margin-bottom: 20px; font-size: 1.5rem;">PROMISES OF RESTORATION</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">
+                        Restoring Hope, Rebuilding Lives.
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 10px; color: rgba(255,255,255,0.9);">
+                        <span><strong style="color: var(--accent);">Address:</strong> Kiambu Kirigiti<br>P.O. Box 882-00900, KIAMBU</span>
+                        <span><strong style="color: var(--accent);">Phone:</strong> <a href="tel:0704525568" style="color:inherit;text-decoration:none;">0704525568</a></span>
+                        <span><strong style="color: var(--accent);">Email:</strong> <a href="mailto:restorationofhope@gmail.com" style="color:inherit;text-decoration:none;">restorationofhope@gmail.com</a></span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div>
+                    <h3 style="color: var(--white); margin-bottom: 20px; font-size: 1.25rem;">Our Services</h3>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+                        <li><a href="#services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Individual Counselling</a></li>
+                        <li><a href="#services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Drug Addiction Treatment</a></li>
+                        <li><a href="#services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Group Counselling</a></li>
+                        <li><a href="#services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Family Therapy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Extra Links -->
+                <div>
+                    <h3 style="color: var(--white); margin-bottom: 20px; font-size: 1.25rem;">Extra Links</h3>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+                        <li><a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Book Appointment</a></li>
+                        <li><a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Admission</a></li>
+                        <li><a href="https://nacada.go.ke/" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">NACADA</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h3 style="color: var(--white); margin-bottom: 20px; font-size: 1.25rem;">Stay Updated</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 15px;">Join our newsletter for updates on progress and events.</p>
+                    <form onsubmit="event.preventDefault();" style="display: flex; flex-direction: column; gap: 10px;">
+                        <input type="email" placeholder="Email address" required class="newsletter-input" style="width: 100%;">
+                        <button type="submit" class="newsletter-btn" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                    <a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Terms of Use</a>
+                    <a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Legal</a>
+                    <a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">License</a>
+                </div>
+                <div style="color: rgba(255,255,255,0.5); font-size: 0.9rem; text-align: center;">
+                    &copy; 2026 Promises Of Restoration (P.O.R). All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
