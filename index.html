@@ -3,23 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Promises Of Restoration (P.O.R)</title>
-    <meta name="description" content="Affordable addiction recovery and rehabilitation services in Kiambu, Kenya. Promises of Restoration helps individuals overcome drug and alcohol addiction.">
-    
+    <title>Promises Of Restoration Centre</title>
+    <meta name="description"
+        content="Affordable addiction recovery and rehabilitation services in Kiambu, Kenya. Promises Of Restoration Centre helps individuals overcome drug and alcohol addiction.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
-            --primary: #0F766E; /* Deep teal/green */
-            --secondary: #2E8B57; /* Sea green */
-            --accent: #EAB308; /* Soft gold for faith/hope */
-            --bg-light: #EEF2F6; /* Softened light background to reduce brightness */
+            --primary: #0F766E;
+            /* Deep teal/green */
+            --secondary: #2E8B57;
+            /* Sea green */
+            --accent: #EAB308;
+            /* Soft gold for faith/hope */
+            --bg-light: #EEF2F6;
+            /* Softened light background to reduce brightness */
             --text-dark: #1E293B;
             --text-muted: #475569;
-            --white: #F8F9FA; /* Off-white to reduce glare */
+            --white: #F8F9FA;
+            /* Off-white to reduce glare */
         }
 
         * {
@@ -37,7 +45,11 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, .logo-text {
+        h1,
+        h2,
+        h3,
+        h4,
+        .logo-text {
             font-family: 'Montserrat', sans-serif;
             color: var(--primary);
         }
@@ -49,12 +61,21 @@
             padding: 0 clamp(24px, 5vw, 60px);
         }
 
-        .text-center { text-align: center; }
+        .text-center {
+            text-align: center;
+        }
 
         /* Animations */
         @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .animate-fade-up {
@@ -62,8 +83,13 @@
             opacity: 0;
         }
 
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
 
         /* Header */
         header {
@@ -72,7 +98,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
         .navbar {
@@ -109,7 +135,7 @@
             border: 1px solid rgba(15, 118, 110, 0.2);
             transition: all 0.3s ease;
         }
-        
+
         .contact-cta:hover {
             background: rgba(15, 118, 110, 0.1);
             transform: translateY(-2px);
@@ -136,9 +162,11 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%; right: -20%;
-            width: 800px; height: 800px;
-            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
             border-radius: 50%;
             z-index: 0;
         }
@@ -148,7 +176,10 @@
             z-index: 1;
         }
 
-        .hero-title, .newsletter-btn, .contact-cta a, .contact-cta span {
+        .hero-title,
+        .newsletter-btn,
+        .contact-cta a,
+        .contact-cta span {
             font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
         }
@@ -158,7 +189,7 @@
             line-height: 1.1;
             margin-bottom: 24px;
             color: #FFFFFF;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
 
         .hero-subtitle {
@@ -166,7 +197,7 @@
             color: rgba(255, 255, 255, 0.95);
             max-width: 700px;
             margin: 0 auto 60px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         /* Image Cards */
@@ -181,13 +212,13 @@
             background: var(--white);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
         }
 
         .image-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
 
         .image-card img {
@@ -241,14 +272,14 @@
             background: #F8FAFC;
             border-radius: 20px;
             border-top: 5px solid var(--secondary);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
             text-align: left;
             transition: all 0.3s;
         }
 
         .feature-card:hover {
             background: var(--white);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             transform: translateY(-5px);
         }
 
@@ -267,7 +298,7 @@
 
         .values-container h3 {
             color: var(--white);
-            border-bottom: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             padding-bottom: 15px;
             margin-bottom: 20px;
             font-size: 1.5rem;
@@ -277,7 +308,7 @@
         }
 
         .values-container p {
-            color: rgba(255,255,255,0.85);
+            color: rgba(255, 255, 255, 0.85);
             font-size: 1.1rem;
             margin-bottom: 30px;
         }
@@ -294,7 +325,8 @@
         /* Services Section */
         .services-section {
             padding: 120px 0;
-            background: #F0FDF4; /* Very light green */
+            background: #F0FDF4;
+            /* Very light green */
             text-align: center;
         }
 
@@ -302,13 +334,13 @@
             background: var(--white);
             padding: 40px 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
             transition: all 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             border-bottom: 4px solid var(--primary);
         }
 
@@ -316,6 +348,59 @@
             font-size: 1.6rem;
             margin-bottom: 16px;
             color: var(--primary);
+        }
+
+        .service-img-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-img-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-img-card-img-wrapper {
+            overflow: hidden;
+            width: 100%;
+            height: 220px;
+        }
+
+        .service-img-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-bottom: 4px solid var(--primary);
+            transition: transform 0.5s ease;
+        }
+
+        .service-img-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-img-card-content {
+            padding: 24px;
+            flex-grow: 1;
+        }
+
+        .service-img-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        .service-img-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         /* Contact Section */
@@ -343,16 +428,19 @@
         }
 
         .newsletter {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             padding: 40px;
             border-radius: 20px;
             max-width: 600px;
             margin: 0 auto 60px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .newsletter h3 { color: var(--white); margin-bottom: 20px; }
+
+        .newsletter h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
 
         .newsletter-form {
             display: flex;
@@ -364,8 +452,8 @@
         .newsletter-input {
             padding: 14px 24px;
             border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
             color: var(--white);
             width: 300px;
             max-width: 100%;
@@ -374,7 +462,7 @@
         }
 
         .newsletter-input::placeholder {
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
         }
 
         .newsletter-btn {
@@ -399,8 +487,8 @@
         .footer-bottom {
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
             font-size: 0.9rem;
         }
 
@@ -418,12 +506,14 @@
             box-shadow: 0 4px 15px rgba(234, 179, 8, 0.4);
             border: 2px solid var(--accent);
         }
+
         .primary-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 15px rgba(234, 179, 8, 0.6);
             background: #FDE047;
             border-color: #FDE047;
         }
+
         .outline-btn {
             padding: 15px 35px;
             background: transparent;
@@ -436,8 +526,9 @@
             border: 2px solid var(--white);
             transition: all 0.3s;
         }
+
         .outline-btn:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             transform: translateY(-3px);
         }
 
@@ -449,6 +540,7 @@
             gap: 5px;
             margin-left: 20px;
         }
+
         .menu-toggle .bar {
             width: 25px;
             height: 3px;
@@ -458,7 +550,10 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .navbar { position: relative; }
+            .navbar {
+                position: relative;
+            }
+
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -468,20 +563,50 @@
                 width: 100%;
                 background: var(--white);
                 padding: 20px 0;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
                 text-align: center;
                 gap: 20px;
             }
-            .nav-links.active { display: flex; }
-            .menu-toggle { display: flex; }
-            .contact-cta { display: none; }
-            .hero-title { font-size: 2.8rem; }
-            .hero { padding: 120px 0 80px; }
-            .hero-subtitle { font-size: 1rem; }
-            .values-container { padding: 30px; }
-            .about-section { padding: 80px 0; }
-            .services-section { padding: 80px 0; }
-            .contact-section { padding: 60px 0 30px; }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .contact-cta {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .values-container {
+                padding: 30px;
+            }
+
+            .about-section {
+                padding: 80px 0;
+            }
+
+            .services-section {
+                padding: 80px 0;
+            }
+
+            .contact-section {
+                padding: 60px 0 30px;
+            }
         }
     </style>
 </head>
@@ -492,9 +617,10 @@
     <header>
         <div class="container navbar">
             <a href="#" style="display: flex; align-items: center; text-decoration: none;">
-                <img src="logo.png" alt="Promises of Restoration Logo" style="height: 85px; width: auto; max-width: 300px; object-fit: contain;">
+                <img src="logo.png" alt="Promises Of Restoration Centre Logo"
+                    style="height: 85px; width: auto; max-width: 300px; object-fit: contain;">
             </a>
-            
+
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -518,74 +644,57 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container text-center hero-content">
-            <h1 class="hero-title animate-fade-up">Promises Of Restoration</h1>
+            <h1 class="hero-title animate-fade-up">Promises Of Restoration Centre</h1>
             <p class="hero-subtitle animate-fade-up delay-1">
-                Restoring Hope, Rebuilding Lives. A strictly Christian-based, non-profit organization dedicated to providing affordable, accessible treatment for substance abuse.
+                Restoring Hope, Rebuilding Lives. A strictly Christian-based, non-profit organization dedicated to
+                providing affordable, accessible treatment for substance abuse.
             </p>
 
-            <div style="margin-top:40px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;" class="animate-fade-up delay-2">
+            <div style="margin-top:40px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;"
+                class="animate-fade-up delay-2">
                 <a href="#contact" class="primary-btn">Get Help Now</a>
                 <a href="#services" class="outline-btn">View Programs</a>
             </div>
 
-            <!-- Hero Images Container -->
-            <div class="image-grid animate-fade-up" style="animation-delay: 0.6s;">
-                <div class="image-card">
-                    <img src="ahadipik2.jpg" loading="lazy" alt="Counseling and Psychology" onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop';">
-                    <div class="image-card-content">
-                        <div class="image-card-title">Counseling & Psychology</div>
-                    </div>
-                </div>
 
-                <div class="image-card">
-                    <img src="depression.jpg" loading="lazy" alt="Depression and Trauma" onerror="this.src='https://images.unsplash.com/photo-1590650153855-d9e808231d41?q=80&w=600&auto=format&fit=crop';">
-                    <div class="image-card-content">
-                        <div class="image-card-title">Depression & Trauma</div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="group_therapy.png" loading="lazy" alt="Group Therapy" onerror="this.src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop';">
-                    <div class="image-card-content">
-                        <div class="image-card-title">Group Therapy</div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="fight_addiction.jpg" loading="lazy" alt="Fight Against Addiction" onerror="this.src='https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=600&auto=format&fit=crop';">
-                    <div class="image-card-content">
-                        <div class="image-card-title">Overcoming Addiction</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- About Us -->
     <section id="about" class="about-section">
         <div class="container">
-            <h2 class="hero-title text-center" style="font-size: 2.5rem; margin-bottom: 20px;">Restoring Hope, Rebuilding Lives</h2>
-            
+            <h2 class="hero-title text-center" style="font-size: 2.5rem; margin-bottom: 20px;">Restoring Hope,
+                Rebuilding Lives</h2>
+
             <p class="about-text text-center">
-                At <strong>Promises of Restoration (P.O.R)</strong>, we believe that no one is beyond the reach of transformation. Located in Kiambu Kirigiti, our center is a strictly Christian-based non-profit dedicated to helping individuals and families break free from the cycle of alcohol and drug addiction.
+                At <strong>Promises Of Restoration Centre</strong>, we believe that no one is beyond the reach of
+                transformation. Located in Kiambu Kirigiti, our center is a strictly Christian-based non-profit
+                dedicated to helping individuals and families break free from the cycle of alcohol and drug addiction.
             </p>
             <p class="about-text text-center" style="margin-bottom: 60px;">
-                We understand that addiction is a treatable disease that affects the whole person—body, mind, and soul. Our mission is to provide a safe, spiritual, and cost-effective environment where healing can begin. Through comprehensive counseling and evidence-based treatment, we walk alongside our clients with Integrity, Loyalty, and Honesty.
+                We understand that addiction is a treatable disease that affects the whole person—body, mind, and soul.
+                Our mission is to provide a safe, spiritual, and cost-effective environment where healing can begin.
+                Through comprehensive counseling and evidence-based treatment, we walk alongside our clients with
+                Integrity, Loyalty, and Honesty.
             </p>
 
-            <h3 class="text-center" style="font-size: 2rem; margin-bottom: 40px; color: var(--text-dark);">Why Choose P.O.R?</h3>
+            <h3 class="text-center" style="font-size: 2rem; margin-bottom: 40px; color: var(--text-dark);">Why Choose
+                Promises Of Restoration Centre?</h3>
             <div class="features-grid">
                 <div class="feature-card">
                     <h4>Faith-Centered Healing</h4>
-                    <p style="color: var(--text-muted);">Our foundation is built on steadfast Christian principles, offering a supportive spiritual anchoring.</p>
+                    <p style="color: var(--text-muted);">Our foundation is built on steadfast Christian principles,
+                        offering a supportive spiritual anchoring.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Affordable Care</h4>
-                    <p style="color: var(--text-muted);">As a non-profit, we prioritize your long-term recovery over profit, making treatment accessible.</p>
+                    <p style="color: var(--text-muted);">As a non-profit, we prioritize your long-term recovery over
+                        profit, making treatment accessible.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Holistic Approach</h4>
-                    <p style="color: var(--text-muted);">We address the physical, spiritual, and emotional health of both the individual and their beloved family.</p>
+                    <p style="color: var(--text-muted);">We address the physical, spiritual, and emotional health of
+                        both the individual and their beloved family.</p>
                 </div>
             </div>
 
@@ -595,7 +704,9 @@
                 <p>To free affected individuals and their families from the bonds of alcohol and drug addiction.</p>
 
                 <h3>Our Mission</h3>
-                <p>To improve the physical, spiritual, and emotional health of those suffering from addiction and their families. We provide safe, transformative, cost-effective, and comprehensive treatment and counseling, guided by integrity and the belief that addiction is a treatable disease.</p>
+                <p>To improve the physical, spiritual, and emotional health of those suffering from addiction and their
+                    families. We provide safe, transformative, cost-effective, and comprehensive treatment and
+                    counseling, guided by integrity and the belief that addiction is a treatable disease.</p>
 
                 <h3>Core Values</h3>
                 <ul class="core-values" style="list-style-type: disc; margin-left: 20px; line-height: 2;">
@@ -614,18 +725,152 @@
         <div class="container">
             <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 60px;">Our Services</h2>
             <div class="image-grid text-left" style="margin-top:0;">
-                <div class="service-card">
-                    <h3>Alcohol Rehab</h3>
-                    <p style="color: var(--text-muted);">Comprehensive inpatient and outpatient programs meticulously designed to help individuals overcome dependency safely and spiritually.</p>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="ahadipik2.jpg" loading="lazy" alt="Psychological Counselling"
+                            onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Psychological Counselling</h3>
+                        <p>Confidential one-on-one sessions focused on addressing the emotional, psychological, and
+                            behavioral factors contributing to addiction or mental health challenges.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>Drug Detox</h3>
-                    <p style="color: var(--text-muted);">Medically supervised and compassionate detoxification services to manage withdrawal symptoms comfortably and effectively.</p>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="depression.jpg" loading="lazy" alt="Depression and Trauma"
+                            onerror="this.src='https://images.unsplash.com/photo-1590650153855-d9e808231d41?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Depression & Trauma</h3>
+                        <p>Specialized care and supportive interventions designed to heal deep emotional wounds and
+                            manage depressive symptoms.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>Family Support</h3>
-                    <p style="color: var(--text-muted);">Empowering counseling and educational sessions for families to rebuild trust and support their loved ones' holistic recovery journey.</p>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="group_therapy.png" loading="lazy" alt="Group Therapy"
+                            onerror="this.src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Group Therapy</h3>
+                        <p>Professionally guided group sessions where individuals share experiences, build connections,
+                            and develop effective coping strategies in a supportive environment.</p>
+                    </div>
                 </div>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="fight_addiction.jpg" loading="lazy" alt="Fight Against Addiction"
+                            onerror="this.src='https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Overcoming Addiction</h3>
+                        <p>Comprehensive strategies and actionable steps to break free from substance dependency and
+                            reclaim a healthy, fulfilling life.</p>
+                    </div>
+                </div>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="medical_detoxification.jpg" loading="lazy" alt="Medical Detoxification"
+                            onerror="this.src='https://images.unsplash.com/photo-1551076805-e18690c5e561?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Medical Detoxification</h3>
+                        <p>Safe, medically supervised withdrawal from drugs or alcohol in a controlled environment,
+                            ensuring patient comfort and safety throughout the detox process.</p>
+                    </div>
+                </div>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="family_therapy.jpg" loading="lazy" alt="Family Therapy"
+                            onerror="this.src='https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Family Therapy</h3>
+                        <p>Sessions designed to heal relationships, improve communication, and equip family members with
+                            the knowledge and tools to support their loved one’s recovery journey.</p>
+                    </div>
+                </div>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="inpatient_rehabilitation.jpg" loading="lazy"
+                            alt="Inpatient / Residential Rehabilitation"
+                            onerror="this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Inpatient / Residential Rehabilitation</h3>
+                        <p>24/7 structured care in a safe and supportive setting, ideal for individuals requiring
+                            intensive treatment and close medical supervision.</p>
+                    </div>
+                </div>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="outpatient_programs.jpg" loading="lazy" alt="Outpatient Programs"
+                            onerror="this.src='https://images.unsplash.com/photo-1576091160550-2173ff9e5eb2?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Outpatient Programs</h3>
+                        <p>Flexible treatment options that allow individuals to receive therapy and support while
+                            continuing to live at home and maintain daily responsibilities.</p>
+                    </div>
+                </div>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="relapse_prevention.jpg" loading="lazy" alt="Relapse Prevention Planning"
+                            onerror="this.src='https://images.unsplash.com/photo-1493836512294-502baa1986e2?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Relapse Prevention Planning</h3>
+                        <p>Personalized strategies and practical tools to help individuals maintain long-term sobriety
+                            and confidently navigate life after treatment.</p>
+                    </div>
+                </div>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="occupational_therapy.jpg" loading="lazy" alt="Occupational Therapy"
+                            onerror="this.src='https://images.unsplash.com/photo-1581090122319-8fab9528eaca?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Occupational Therapy</h3>
+                        <p>Support in regaining independence by rebuilding essential daily living and work-related
+                            skills for a smooth return to normal routines.</p>
+                    </div>
+                </div>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="physical_therapy.jpg" loading="lazy" alt="Physical Therapy / Physiotherapy"
+                            onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Physical Therapy / Physiotherapy</h3>
+                        <p>Targeted exercises and therapeutic techniques to restore strength, mobility, and overall
+                            physical well-being after illness or injury.</p>
+                    </div>
+                </div>
+
+                <div class="service-img-card">
+                    <div class="service-img-card-img-wrapper">
+                        <img src="aftercare_management.jpg" loading="lazy" alt="Aftercare Management"
+                            onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop';">
+                    </div>
+                    <div class="service-img-card-content">
+                        <h3>Aftercare Management</h3>
+                        <p>Ongoing support through follow-ups, counseling, and support groups to ensure sustained
+                            recovery and successful reintegration into society.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -633,18 +878,25 @@
     <!-- Contact & Footer -->
     <footer id="contact" class="contact-section">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 50px; text-align: left; margin-bottom: 80px;">
-                
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 50px; text-align: left; margin-bottom: 80px;">
+
                 <!-- Col 1: Brand & Contact -->
                 <div>
-                    <h3 style="color: var(--white); margin-bottom: 20px; font-size: 1.5rem;">PROMISES OF RESTORATION</h3>
+                    <h3 style="color: var(--white); margin-bottom: 20px; font-size: 1.5rem;">PROMISES OF RESTORATION CENTRE
+                    </h3>
                     <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">
                         Restoring Hope, Rebuilding Lives.
                     </p>
                     <div style="display: flex; flex-direction: column; gap: 10px; color: rgba(255,255,255,0.9);">
-                        <span><strong style="color: var(--accent);">Address:</strong> Kiambu Kirigiti<br>P.O. Box 882-00900, KIAMBU</span>
-                        <span><strong style="color: var(--accent);">Phone:</strong> <a href="tel:0704525568" style="color:inherit;text-decoration:none;">0704525568</a></span>
-                        <span><strong style="color: var(--accent);">Email:</strong> <a href="mailto:restorationofhope@gmail.com" style="color:inherit;text-decoration:none;">restorationofhope@gmail.com</a></span>
+                        <span><strong style="color: var(--accent);">Address:</strong> Kiambu Kirigiti Along Kiambu Ruiru
+                            Road<br>P.O. Box 882-00900, KIAMBU</span>
+                        <span><strong style="color: var(--accent);">Phone:</strong> <a href="tel:0704525568"
+                                style="color:inherit;text-decoration:none;">0704525568</a> | <a href="tel:0119542300"
+                                style="color:inherit;text-decoration:none;">0119542300</a></span>
+                        <span><strong style="color: var(--accent);">Email:</strong> <a
+                                href="mailto:restorationofhope@gmail.com"
+                                style="color:inherit;text-decoration:none;">restorationofhope@gmail.com</a></span>
                     </div>
                 </div>
 
@@ -652,10 +904,24 @@
                 <div>
                     <h3 style="color: var(--white); margin-bottom: 20px; font-size: 1.25rem;">Our Services</h3>
                     <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
-                        <li><a href="#services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Individual Counselling</a></li>
-                        <li><a href="#services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Drug Addiction Treatment</a></li>
-                        <li><a href="#services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Group Counselling</a></li>
-                        <li><a href="#services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Family Therapy</a></li>
+                        <li><a href="#services"
+                                style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Psychological
+                                Counselling</a></li>
+                        <li><a href="#services"
+                                style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Drug
+                                Addiction Treatment</a></li>
+                        <li><a href="#services"
+                                style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Group
+                                Counselling</a></li>
+                        <li><a href="#services"
+                                style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Family
+                                Therapy</a></li>
+                        <li><a href="#services"
+                                style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Drugs
+                                Test</a></li>
+                        <li><a href="#services"
+                                style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Detoxification</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -663,18 +929,26 @@
                 <div>
                     <h3 style="color: var(--white); margin-bottom: 20px; font-size: 1.25rem;">Extra Links</h3>
                     <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
-                        <li><a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Book Appointment</a></li>
-                        <li><a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Admission</a></li>
-                        <li><a href="https://nacada.go.ke/" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">NACADA</a></li>
+                        <li><a href="#"
+                                style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Book
+                                Appointment</a></li>
+                        <li><a href="#"
+                                style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Admission</a>
+                        </li>
+                        <li><a href="https://nacada.go.ke/" target="_blank" rel="noopener noreferrer"
+                                style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">NACADA</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Col 4: Newsletter -->
                 <div>
                     <h3 style="color: var(--white); margin-bottom: 20px; font-size: 1.25rem;">Stay Updated</h3>
-                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 15px;">Join our newsletter for updates on progress and events.</p>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 15px;">Join our newsletter for updates on
+                        progress and events.</p>
                     <form onsubmit="event.preventDefault();" style="display: flex; flex-direction: column; gap: 10px;">
-                        <input type="email" placeholder="Email address" required class="newsletter-input" style="width: 100%;">
+                        <input type="email" placeholder="Email address" required class="newsletter-input"
+                            style="width: 100%;">
                         <button type="submit" class="newsletter-btn" style="width: 100%;">Subscribe</button>
                     </form>
                 </div>
@@ -683,12 +957,21 @@
 
             <div class="footer-bottom" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
                 <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-                    <a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Terms of Use</a>
-                    <a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Legal</a>
-                    <a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">License</a>
+                    <a href="#"
+                        style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;"
+                        onmouseover="this.style.color='#fff'"
+                        onmouseout="this.style.color='rgba(255,255,255,0.7)'">Terms of Use</a>
+                    <a href="#"
+                        style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;"
+                        onmouseover="this.style.color='#fff'"
+                        onmouseout="this.style.color='rgba(255,255,255,0.7)'">Legal</a>
+                    <a href="#"
+                        style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;"
+                        onmouseover="this.style.color='#fff'"
+                        onmouseout="this.style.color='rgba(255,255,255,0.7)'">License</a>
                 </div>
                 <div style="color: rgba(255,255,255,0.5); font-size: 0.9rem; text-align: center;">
-                    &copy; 2026 Promises Of Restoration (P.O.R). All rights reserved.
+                    &copy; 2026 Promises Of Restoration Centre. All rights reserved.
                 </div>
             </div>
         </div>
@@ -702,18 +985,17 @@
             navLinks.classList.toggle('active');
         });
     </script>
-    
+
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/254704525568" 
-       style="position:fixed;bottom:20px;right:20px;
+    <a href="https://wa.me/254704525568" style="position:fixed;bottom:20px;right:20px;
        background:#25D366;color:white;padding:12px 18px;
        border-radius:50px;text-decoration:none;
        box-shadow:0 4px 10px rgba(0,0,0,0.3);z-index:9999;
        font-family:'Montserrat', sans-serif; font-weight:700;
-       transition:transform 0.3s;"
-       onmouseover="this.style.transform='scale(1.05)'" 
-       onmouseout="this.style.transform='scale(1)'">
-       Chat on WhatsApp
+       transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'">
+        Chat on WhatsApp
     </a>
 </body>
+
 </html>
